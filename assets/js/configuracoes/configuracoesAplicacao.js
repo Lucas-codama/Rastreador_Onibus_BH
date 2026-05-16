@@ -42,7 +42,7 @@ export const CONFIGURACOES_APLICACAO = {
   cores: {
     onibus: "#7c3aed",
     ponto: "#f59f00",
-    pontoMaisProximo: "#bb35dc",
+    pontoMaisProximo: "#dc3535",
     usuario: "#198754"
   },
 
