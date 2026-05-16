@@ -171,7 +171,6 @@ export function criarMarcadorOnibus(onibus, opcoes = {}) {
 
 
 
-
 /**
  * Atualiza um marcador de ônibus já existente.
  *
@@ -211,7 +210,10 @@ export function criarMarcadorPonto(ponto, ehMaisProximo = false) {
 
   const marcador = L.circleMarker(
     [ponto.lat, ponto.lng],
-    criarEstiloMarcador(tipo, cor)
+    {
+      ...criarEstiloMarcador(tipo, cor),
+      pane: ehMaisProximo ? "markerPane" : "overlayPane"
+    }
   );
 
   marcador.bindPopup(`
