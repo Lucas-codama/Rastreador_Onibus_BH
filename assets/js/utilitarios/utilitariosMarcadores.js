@@ -1,5 +1,8 @@
 import { CONFIGURACOES_APLICACAO } from "../configuracoes/configuracoesAplicacao.js";
 
+
+
+
 /**
  * Converte um valor para texto seguro antes de inserir em HTML.
  *
@@ -14,6 +17,9 @@ function escaparHtml(valor) {
     .replaceAll('"', "&quot;")
     .replaceAll("'", "&#039;");
 }
+
+
+
 
 /**
  * Cria o estilo visual de um marcador circular do Leaflet.
@@ -32,6 +38,9 @@ function criarEstiloMarcador(tipo, cor) {
   };
 }
 
+
+
+
 /**
  * Remove todos os marcadores de uma camada do mapa.
  *
@@ -40,6 +49,9 @@ function criarEstiloMarcador(tipo, cor) {
 export function limparCamada(camada) {
   camada.clearLayers();
 }
+
+
+
 
 /**
  * Cria o conteúdo HTML interno do marcador de ônibus.
@@ -65,6 +77,9 @@ function criarConteudoOnibus(onibus, opcoes = {}) {
     </div>
   `;
 }
+
+
+
 
 /**
  * Cria um ícone personalizado de ônibus para o Leaflet.
@@ -93,6 +108,9 @@ function criarIconeOnibus(onibus, opcoes = {}) {
   });
 }
 
+
+
+
 /**
  * Cria o HTML do popup de um ônibus.
  *
@@ -107,6 +125,9 @@ function criarPopupOnibus(onibus) {
     <p class="popup-linha">Horario: ${escaparHtml(onibus.horarioFormatado)}</p>
   `;
 }
+
+
+
 
 /**
  * Cria um marcador de ônibus no mapa.
@@ -148,6 +169,9 @@ export function criarMarcadorOnibus(onibus, opcoes = {}) {
   return marcador;
 }
 
+
+
+
 /**
  * Atualiza um marcador de ônibus já existente.
  *
@@ -163,6 +187,9 @@ export function atualizarMarcadorOnibus(marcador, onibus, opcoes = {}) {
   marcador.setIcon(criarIconeOnibus(onibus, opcoes));
   marcador.setPopupContent(criarPopupOnibus(onibus));
 }
+
+
+
 
 /**
  * Cria um marcador para um ponto de ônibus.
@@ -196,6 +223,9 @@ export function criarMarcadorPonto(ponto, ehMaisProximo = false) {
 
   return marcador;
 }
+
+
+
 
 /**
  * Cria um marcador para representar a localização do usuário.

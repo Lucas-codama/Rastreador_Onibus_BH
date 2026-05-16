@@ -1,5 +1,8 @@
 import { CONFIGURACOES_APLICACAO } from "../configuracoes/configuracoesAplicacao.js";
 
+
+
+
 /**
  * Registra a projeção UTM usada pela aplicação na biblioteca proj4.
  */
@@ -7,6 +10,9 @@ export function registrarProjecaoUtm() {
   const { utm, definicaoUtm } = CONFIGURACOES_APLICACAO.projecao;
   window.proj4.defs(utm, definicaoUtm);
 }
+
+
+
 
 /**
  * Extrai as coordenadas UTM de uma geometria no formato POINT.
@@ -39,6 +45,9 @@ export function extrairCoordenadasUtm(geometria) {
   } else return null;
 }
 
+
+
+
 /**
  * Converte coordenadas UTM para latitude e longitude.
  *
@@ -52,6 +61,9 @@ export function converterUtmParaLatLng(x, y) {
 
   return { lat, lng };
 }
+
+
+
 
 /**
  * Verifica se uma latitude e uma longitude são válidas.

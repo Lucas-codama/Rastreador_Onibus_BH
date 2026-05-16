@@ -13,6 +13,9 @@ export function normalizarCodigoLinha(valor) {
     .join("");
 }
 
+
+
+
 /**
  * Normaliza o código e remove o sufixo numérico após hífen,
  * como em "8001A-2", que vira "8001A".
@@ -32,6 +35,9 @@ export function obterCodigoBaseLinha(valor) {
   return partes.join("-");
 }
 
+
+
+
 /**
  * Mantém pelo menos um caractere caso o código seja composto apenas por zeros.
  *
@@ -47,6 +53,9 @@ function removerZerosIniciais(codigo) {
 
   return texto;
 }
+
+
+
 
 /**
  * Gera as possíveis chaves de comparação de uma linha.
@@ -65,6 +74,9 @@ export function obterChavesLinha(valor) {
   return new Set([codigo, removerZerosIniciais(codigo)]);
 }
 
+
+
+
 /**
  * Compara as chaves possíveis das duas linhas, considerando variações
  * como zeros iniciais e sufixos numéricos após hífen.
@@ -82,6 +94,9 @@ export function linhasCorrespondem(linhaA, linhaB) {
 
   return false;
 }
+
+
+
 
 /**
  * Cria uma cópia da lista original e ordena usando comparação numérica,

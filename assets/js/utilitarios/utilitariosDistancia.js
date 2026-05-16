@@ -1,5 +1,8 @@
 const RAIO_TERRA_METROS = 6371000;
 
+
+
+
 /**
  * Converte um valor angular de graus para radianos.
  * Essa conversão é necessária antes de aplicar operações como seno, cosseno e arco seno.
@@ -10,6 +13,9 @@ const RAIO_TERRA_METROS = 6371000;
 function grausParaRadianos(valor) {
   return valor * Math.PI / 180;
 }
+
+
+
 
 /**
  * Calcula a distância aproximada entre dois pontos geográficos.
@@ -37,6 +43,9 @@ export function calcularDistanciaMetros(origem, destino) {
 
   return 2 * RAIO_TERRA_METROS * Math.asin(Math.sqrt(parteInternaDaRaiz));
 }
+
+
+
 
 /**
  * Formata uma distância em metros para exibição textual.
