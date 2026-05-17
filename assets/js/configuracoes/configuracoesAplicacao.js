@@ -1,6 +1,8 @@
 export const CONFIGURACOES_APLICACAO = {
   urlApi: "https://corsproxy.io/?url=https%3A%2F%2Ftemporeal.pbh.gov.br%2F%3Fparam%3DD",
   urlsApiAlternativas: [
+  "https://corsproxy-8uo5.onrender.com/?url=https%3A%2F%2Ftemporeal.pbh.gov.br%2F%3Fparam%3DD",
+  "https://proxy.corsfix.com/?url=https%3A%2F%2Ftemporeal.pbh.gov.br%2F%3Fparam%3DD",
   "https://corsproxy.io/?url=https://temporeal.pbh.gov.br/?param=D",
   "https://proxy.corsfix.com/?https://temporeal.pbh.gov.br/?param=D"
   ],
