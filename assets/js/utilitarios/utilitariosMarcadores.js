@@ -34,7 +34,7 @@ function criarEstiloMarcador(tipo, cor) {
     weight: tipo.espessuraBorda,
     color: "#ffffff",
     fillColor: cor,
-    fillOpacity: tipo.opacidadePreenchimente
+    fillOpacity: tipo.opacidadePreenchimento
   };
 }
 
